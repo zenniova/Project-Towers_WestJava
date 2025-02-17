@@ -1,0 +1,38 @@
+.tower-popup {
+    min-width: 250px;
+    padding: 1rem;
+}
+
+.tower-popup h4 {
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.tower-popup p {
+    margin: 0.5rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.tower-popup strong {
+    color: #333;
+    font-weight: 500;
+}
+
+.tower-popup br {
+    content: "";
+    display: block;
+    margin: 0.25rem 0;
+}
+
+.tower-coordinates {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-family: monospace;
+    font-size: 0.9rem;
+} 

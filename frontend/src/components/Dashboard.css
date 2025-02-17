@@ -1,0 +1,170 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.dashboard-header {
+    background-color: #1a73e8;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-title h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.header-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.header-info {
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.controls-panel {
+    background-color: white;
+    padding: 1.25rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    z-index: 2;
+}
+
+.controls-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.controls-section h2, .tower-info-section h2 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.map-panel {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.selected-tower-info {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid #e9ecef;
+}
+
+.selected-tower-info p {
+    margin: 0.5rem 0;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.selected-tower-info ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    color: #666;
+}
+
+.selected-tower-info li {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.nearby-towers-info {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.nearby-towers-info h3 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+}
+
+.nearby-towers-info ul {
+    margin: 0;
+    padding-left: 1.5rem;
+    color: #666;
+}
+
+.nearby-towers-info li {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.error-message {
+    padding: 0.75rem 1rem;
+    margin: 0.75rem 0;
+    background-color: #fdecea;
+    color: #d32f2f;
+    border-radius: 4px;
+    border: 1px solid #ffa4a2;
+    font-size: 0.9rem;
+}
+
+/* Controls consistency */
+.city-control,
+.search-control,
+.sector-control {
+    width: 100%;
+}
+
+/* Make sure the root element takes full height */
+#root, .App {
+    height: 100vh;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .controls-panel {
+        max-height: 50vh;
+        order: 2;
+        padding: 1rem;
+    }
+
+    .map-panel {
+        order: 1;
+        height: 50vh;
+    }
+} 

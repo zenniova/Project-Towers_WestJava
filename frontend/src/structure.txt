@@ -1,0 +1,7 @@
+src/
+  ├── components/        # Komponen yang dapat digunakan kembali
+  ├── pages/            # Halaman-halaman utama
+  ├── services/         # Layanan API
+  ├── utils/            # Fungsi utilitas
+  ├── assets/           # Gambar, font, dll
+  └── styles/           # File CSS 

@@ -1,0 +1,39 @@
+.sector-popup {
+    padding: 10px;
+    max-width: 300px;
+}
+
+.sector-popup h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+.sector-popup p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.sector-popup .cell-info {
+    margin-top: 10px;
+    background-color: #f8f9fa;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.sector-popup .cell-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.sector-popup .cell-info li {
+    margin: 3px 0;
+    font-size: 13px;
+}
+
+.sector-popup strong {
+    color: #555;
+} 
