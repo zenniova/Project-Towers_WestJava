@@ -22,6 +22,14 @@ router.get('/triangle-dimensions', towerController.getTriangleDimensions);
 router.get('/kabupaten', towerController.getKabupatenList);
 router.get('/kabupaten/:kabupaten/towers', towerController.getTowersByKabupaten);
 
+// Payload routes
+router.get('/payload/cellname/:cellname', towerController.getAllPayloadByCellname);
+router.get('/payload/summary/:site_id', towerController.getPayloadSummary);
+router.post('/payload', towerController.addPayloadData);
+
+// Cell details route
+router.get('/cells/details', towerController.getCellDetails);
+
 // Legacy routes for backward compatibility
 router.get('/cells', towerController.getAllMark);
 router.get('/cells/site/:site_id', towerController.getSectors);

@@ -1,39 +1,256 @@
 .sector-popup {
-    padding: 10px;
-    max-width: 300px;
+    padding: 15px;
+    max-width: 400px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.sector-popup.fullscreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90vw;
+    max-width: 1200px;
+    height: 90vh;
+    background: white;
+    z-index: 9999;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.popup-nav {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 12px;
+    align-items: center;
+}
+
+.nav-btn {
+    flex: 1;
+    padding: 10px 20px;
+    border: 1.5px solid #e0e0e0;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    color: #555;
+}
+
+.nav-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #1a73e8;
+    color: #1a73e8;
+    transform: translateY(-1px);
+}
+
+.nav-btn:active {
+    transform: translateY(0);
+}
+
+.nav-btn.active {
+    background-color: #1a73e8;
+    color: white;
+    border-color: #1557b0;
+    box-shadow: 0 2px 4px rgba(26, 115, 232, 0.2);
+}
+
+.fullscreen-btn {
+    padding: 8px 12px;
+    border: 1.5px solid #e0e0e0;
+    background-color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    transition: all 0.2s ease;
+    color: #666;
+}
+
+.fullscreen-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #1a73e8;
+    color: #1a73e8;
+    transform: translateY(-1px);
+}
+
+.fullscreen-btn:active {
+    transform: translateY(0);
 }
 
 .sector-popup h4 {
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
     color: #333;
     font-size: 16px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
+    font-weight: 600;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
 }
 
 .sector-popup p {
-    margin: 5px 0;
+    margin: 8px 0;
     font-size: 14px;
+    line-height: 1.5;
+    color: #444;
 }
 
 .sector-popup .cell-info {
-    margin-top: 10px;
+    margin-top: 15px;
     background-color: #f8f9fa;
-    padding: 8px;
-    border-radius: 4px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
 }
 
 .sector-popup .cell-info ul {
     list-style: none;
     padding: 0;
-    margin: 5px 0;
+    margin: 8px 0;
 }
 
 .sector-popup .cell-info li {
-    margin: 3px 0;
+    margin: 8px 0;
     font-size: 13px;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .sector-popup strong {
-    color: #555;
+    color: #444;
+    font-weight: 600;
+}
+
+.sector-payload-popup {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sector-payload-popup.fullscreen {
+    height: calc(100% - 80px);
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 24px;
+}
+
+.chart-container {
+    width: 100%;
+    height: 250px;
+    margin: 15px 0;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.fullscreen .chart-container {
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    padding: 24px;
+}
+
+.chart-loading,
+.chart-error,
+.chart-empty {
+    height: 120px;
+    font-size: 13px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px dashed #dee2e6;
+    gap: 10px;
+    text-align: center;
+    color: #666;
+}
+
+.chart-error {
+    background-color: #fff5f5;
+    border-color: #feb2b2;
+    color: #c53030;
+}
+
+.chart-empty {
+    background-color: #fffbeb;
+    border-color: #fbd38d;
+    color: #c05621;
+}
+
+/* Override Leaflet popup styles */
+.leaflet-popup-content {
+    margin: 0;
+    width: auto !important;
+    min-width: 400px;
+}
+
+.leaflet-popup-content-wrapper {
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+.leaflet-popup-tip {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
+
+/* Fullscreen backdrop */
+.sector-popup.fullscreen::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.chart-loading {
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sector-popup {
+        max-width: 100%;
+        padding: 12px;
+    }
+
+    .leaflet-popup-content {
+        min-width: 300px;
+    }
+
+    .sector-popup.fullscreen {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
 } 

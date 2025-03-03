@@ -24,7 +24,7 @@ const Dashboard = () => {
         <div className="dashboard">
             <header className="dashboard-header">
                 <div className="header-title">
-                    <h1>Tower Monitoring System</h1>
+                    <h1>Dashboard Monitoring Tower</h1>
                     <span className="header-subtitle">Telkomsel Regional Jawa Barat</span>
                 </div>
                 <div className="header-info">
