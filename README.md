@@ -101,4 +101,15 @@ npm start
 
 ## Lisensi
 
-Distributed under the MIT License. See `LICENSE` for more information. 
+Distributed under the MIT License. See `LICENSE` for more information.
+
+# Database Configuration
+DB_HOST=156.67.218.186
+DB_USER=zenni
+DB_PASSWORD=#ICTelkomJabar1
+DB_NAME=towerdb
+DB_PORT=3306
+
+# Server Configuration
+PORT=3000
+NODE_ENV=production 
